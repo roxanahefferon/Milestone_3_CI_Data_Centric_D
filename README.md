@@ -75,8 +75,18 @@ Existing Git repository
 For existing repositories, simply add the heroku remote
 $ heroku git:remote -a data-centric-m3-ci
 
-<h2></h2>
-<h2></h2>
+<h2>Colour Scheme</h2>
+
+#FFFEFE
+#F2A535
+#2A2A2A
+#979797
+#F8CD8E
+Fonts: Norwester | Montserrat Classic
+
+<h2>Credits</h2>
+Logo created in <a href="https://www.canva.com/">Canva</a>
+Favicon created in <a href="https://www.favicon-generator.org/">Favicon</a>
 <h2></h2>
 <h2></h2>
 <h2></h2>
