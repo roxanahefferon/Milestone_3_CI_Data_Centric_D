@@ -34,9 +34,6 @@ def add_own():
     return render_template("add_own.html")
 
 
-
-
-
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
