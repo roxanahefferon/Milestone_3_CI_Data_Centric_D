@@ -31,15 +31,15 @@ def courses():
 
 @app.route('/courses/<option_name>')
 def courses_option(option_name):
-    meal = {}
+    option = {}
     
     with open("data/categories.json", "r") as json_data:
         data = json.load(json_data)
         for obj in data:
             if obj["url"] == option_name:
-                meal = obj
+                option = obj
     
-    return "<h1>" + meal["name"] + "</h1>"
+    return render_template("selected.html", option=option)
 
 
 @app.route("/recipes")
