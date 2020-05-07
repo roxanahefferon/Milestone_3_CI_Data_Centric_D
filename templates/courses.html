@@ -19,12 +19,10 @@
 
 {% for option in categories %}
 
-{{ loop.index }}
-
 
 <div class="row featurette">
         <div class="col-md-7">
-            <h4>{{ option.name }}</h4>
+            <h2><a href="/courses/{{ option.url }}"> {{ loop.index }}. {{ option.name }}</a></h2>
                 <p>{{ option.description }}</p>
         </div>
         <div class="col-md-5">
