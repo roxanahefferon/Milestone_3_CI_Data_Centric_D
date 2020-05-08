@@ -1,6 +1,6 @@
 import os
 import json
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -47,9 +47,11 @@ def recipes():
     return render_template("recipes.html", view_name="Recipes")
 
 
-@app.route("/add_own")
-def add_own():
-    return render_template("add_own.html", view_name="Add your own recipe")
+@app.route("/get_in_touch", methods=["GET", "POST"])
+def get_in_touch():
+    if request.method == "POST":
+        print (request.form)
+    return render_template("get_in_touch.html", view_name="Get in touch")
 
 
 if __name__ == '__main__':
