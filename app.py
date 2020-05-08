@@ -22,9 +22,13 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/recipes')
+@app.route("/recipes")
 def recipes():
     return render_template("recipes.html", recipe=mongo.db.recipe.find())
+
+@app.route("/add_recipe")
+def add_recipe():
+    return render_template("login.html")
 
 
 @app.route("/register")

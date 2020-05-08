@@ -8,10 +8,85 @@
 </head>
 <body>
 
-{% extends 'base.html' %}
-{% block content %}
-    <h1>{{ view_name}}</h1>
-{% endblock %}
+{% extends 'base.html' %} {% block content %}
+<h3>Add Recipe</h3>
+<div class="row">
+    <form action="" method="POST" class="col s12">
+        
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">double_arrow</i>
+                <input id="recipe_name" name="recipe_name" type="text">
+                <label for="icon_prefix">Recipe Name</label>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">subject</i>
+                <textarea name="category_name" id="category_name" class="materialize-textarea"></textarea>
+                <label for="icon_telephone">Category Name</label>
+            </div>
+        </div>
 
-</body>
-</html>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">subject</i>
+                <textarea name="recipe_description" id="recipe_description" class="materialize-textarea"></textarea>
+                <label for="icon_telephone">Recipe Description</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">subject</i>
+                <textarea name="ingredients" id="ingredients" class="materialize-textarea"></textarea>
+                <label for="icon_telephone">Ingredients</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">subject</i>
+                <textarea name="method" id="method" class="materialize-textarea"></textarea>
+                <label for="icon_telephone">Method</label>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">today</i>
+                <input id="due_date" name="due_date" type="text" class="datepicker">
+                <label for="icon_prefix">Servings</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">people</i>
+                <input id="servings" name="servings" type="text" class="datepicker">
+                <label for="icon_prefix">Difficulty</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">hourglass_empty</i>
+                <input id="cook_time" name="cook_time" type="text" class="datepicker">
+                <label for="icon_prefix">Cooking time</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="switch">
+                <label>
+                  <input id="is_vegetarian" name="is_vegetarian" type="checkbox">
+                  <span class="lever"></span>
+                  Is Vegetarian
+                </label>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
