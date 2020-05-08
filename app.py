@@ -13,13 +13,18 @@ app = Flask(__name__)
 app.config["MONGO_DBNAME"] = os.environ.get('MONGO_DBNAME')
 app.config["MONGO_URI"] = os.environ.get('MONGO_URI') 
 
-
 app.secret_key = "grubs_key"
 
+mongo = PyMongo(app)
 
 @app.route("/")
 def index():
     return render_template("index.html")
+
+
+@app.route('/recipes')
+def recipes():
+    return render_template("recipes.html", recipe=mongo.db.recipe.find())
 
 
 @app.route("/register")
@@ -51,11 +56,6 @@ def courses_option(option_name):
                 option = obj
 
     return render_template("selected.html", option=option)
-
-
-@app.route("/recipes")
-def recipes():
-    return render_template("recipes.html", view_name="Recipes")
 
 
 @app.route('/get_in_touch', methods=["GET", "POST"])
