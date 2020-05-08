@@ -1,9 +1,9 @@
 import os
 import json
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash
 
 app = Flask(__name__)
-
+app.secret_key = "grubs_key"
 
 @app.route("/")
 def index():
@@ -47,11 +47,13 @@ def recipes():
     return render_template("recipes.html", view_name="Recipes")
 
 
-@app.route("/get_in_touch", methods=["GET", "POST"])
+@app.route('/get_in_touch', methods=["GET", "POST"])
 def get_in_touch():
     if request.method == "POST":
-        print (request.form)
-    return render_template("get_in_touch.html", view_name="Get in touch")
+        flash("Thanks {}, we have received your message".format(
+            request.form["name"]
+        ))
+    return render_template("get_in_touch.html", page_title="Get_in_touch")
 
 
 if __name__ == '__main__':
