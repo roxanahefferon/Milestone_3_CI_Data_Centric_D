@@ -5,6 +5,7 @@ from flask import Flask, render_template, request, flash
 app = Flask(__name__)
 app.secret_key = "grubs_key"
 
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -32,13 +33,12 @@ def courses():
 @app.route('/courses/<option_name>')
 def courses_option(option_name):
     option = {}
-    
     with open("data/categories.json", "r") as json_data:
         data = json.load(json_data)
         for obj in data:
             if obj["url"] == option_name:
                 option = obj
-    
+
     return render_template("selected.html", option=option)
 
 
