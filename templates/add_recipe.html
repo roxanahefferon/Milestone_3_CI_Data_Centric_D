@@ -1,30 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Grub's Up!</title>
 </head>
+
 <body>
-{% extends 'base.html' %} {% block content %}
-<h3>Add Task</h3>
-<div class="row">
-    <form  action="" method="POST" class="col s12">
-        <div class="row">
-            <div class="input-field col s6">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" class="validate">
-                <label for="icon_prefix">First Name</label>
-            </div>
-            <div class="input-field col s6">
-                <i class="material-icons prefix">phone</i>
-                <input id="icon_telephone" type="tel" class="validate">
-                <label for="icon_telephone">Telephone</label>
-            </div>
-        </div>
-    </form>
-</div>
-{% endblock %}
+
+	{% extends 'base.html' %} {% block content %}
+	<h3>Add Recipe</h3>
+	<div class="row">
+		<form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
+
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">double_arrow</i>
+					<select id="category_name" name="category_name">
+      <option value="" disabled selected>Category</option>
+        {% for cat in categories %}
+        <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+        {% endfor %}
+    </select>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">fiber_new</i>
+					<input id="recipe_name" name="recipe_name" type="text" class="form-control" required>
+					<label for="icon_prefix">Recipe Name</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">comment</i>
+					<textarea name="recipe_description" id="recipe_description" class="materialize-textarea" required></textarea>
+					<label for="icon_telephone">Recipe Description</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">shopping_cart</i>
+					<textarea name="ingredients" id="ingredients" class="materialize-textarea" required></textarea>
+					<label for="icon_telephone">Ingredients</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">build</i>
+					<textarea name="method" id="method" class="materialize-textarea"></textarea>
+					<label for="icon_telephone">Method</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">people</i>
+					<input id="Servings" name="servings" type="text">
+					<label for="icon_prefix">Servings</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">assessment</i>
+					<select id="difficulty" name="difficulty">
+      <option value="" disabled selected>Difficulty level</option>
+      {% for dif in difficulty %}
+    <option value="{{dif.difficulty_level}}">{{dif.difficulty_level}}</option>
+        {% endfor %}
+    </select>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">hourglass_full</i>
+					<input id="cook_time" name="cook_time" type="text" class="datepicker">
+					<label for="icon_prefix">Cooking time (in minutes)</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="switch">
+					<label>
+                  <input id="is_vegetarian" name="is_vegetarian" type="checkbox">
+                  <span class="lever"></span>
+                  Is Vegetarian
+                </label>
+				</div>
+			</div>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Add Recipe
+    <i class="material-icons right">send</i>
+  </button>
+		</form>
+	</div>
+
+	{% endblock %}
 </body>
+
 </html>
