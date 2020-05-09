@@ -13,7 +13,7 @@
 	{% extends 'base.html' %} {% block content %}
 	<h3>Edit Recipe</h3>
 	<div class="row">
-		<form action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" method="POST"  class="col s12">
+		<form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST"  class="col s12">
 
 			<div class="row">
 				<div class="input-field col s12">
@@ -82,7 +82,11 @@
 			<div class="row">
 				<div class="switch">
 					<label>
+                    {% if recipe.is_vegetarian %}
+                  <input id="is_vegetarian" name="is_vegetarian" type="checkbox" checked>
+                  {% else %}
                   <input id="is_vegetarian" name="is_vegetarian" type="checkbox">
+                  {% endif %}
                   <span class="lever"></span>
                   Is Vegetarian
                 </label>
@@ -93,6 +97,8 @@
   </button>
 		</form>
 	</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
 	{% endblock %}
 </body>

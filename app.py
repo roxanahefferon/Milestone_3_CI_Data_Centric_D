@@ -47,6 +47,22 @@ def edit_recipe(recipe_id):
     return render_template('editRecipe.html', recipe=the_recipe, categories=all_categories)
 
 
+@app.route('/update_recipe/<recipe_id>', methods=["POST"])
+def update_recipe(recipe_id):
+    recipe = mongo.db.recipe
+    recipe.update( {'_id': ObjectId(recipe_id)},
+    {
+        'recipe_name': request.form.get('recipe_name'),
+        'category_name': request.form.get('category_name'),
+        'recipe_description': request.form.get('recipe_description'),
+        'ingredients': request.form.get('ingredients'),
+        'method': request.form.get('method'),
+        'servings': request.form.get('servings'),
+        'cook_time': request.form.get('cook_time')
+    })
+    return redirect(url_for('recipes'))
+
+
 @app.route("/register")
 def register():
     return render_template("register.html", view_name="Register")
