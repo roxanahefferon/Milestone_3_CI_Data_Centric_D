@@ -44,8 +44,7 @@ def insert_recipe():
 def edit_recipe(recipe_id):
     the_recipe = mongo.db.recipe.find_one({"_id": ObjectId(recipe_id)})
     all_categories = mongo.db.categories.find()
-    return render_template('editRecipe.html', recipe=the_recipe,
-                           categories=all_categories)
+    return render_template('editRecipe.html', recipe=the_recipe, categories=all_categories)
 
 
 @app.route("/register")

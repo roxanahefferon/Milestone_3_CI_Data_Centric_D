@@ -3,7 +3,7 @@
 A web application created in Python and Flask. 
 View website on <a href="https://milestone3-data-centric.herokuapp.com/" target="_blank">Heroku</a>
 A recipe database where viewers can search and view recipes. 
-Users can also create an account, where they can add, edit or delete their own recipes.
+Users can also add, edit or delete their own recipes.
 <h2>UX</h2>
 This website was created with the intention to store and share recipes with other users. The home page shows the recipes categories, and allows the user to choose between Breakfast, Lunch, Dinner and Snacks. When clicking on any category, the user can view a list of recipes from that specific category. The user can choose a specific recipe from the list where it will be displayed more details about the recipe such as: Category, Serving, Time of preparation, difficulty level, ingredients and cooking method. This page also allows the user to delete or edit the recipe. On the navbar the user have access to all recipes, without categories. There's also a link that brings to a form to add a new recipe.
 <h2>Features</h2>
