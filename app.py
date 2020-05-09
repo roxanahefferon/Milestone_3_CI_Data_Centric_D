@@ -1,6 +1,6 @@
 import os
 import json
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, request, flash, url_for, redirect
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -33,6 +33,14 @@ def add_recipe():
     return render_template("login.html")
 
 
+@app.route('/insert_recipe', methods=['POST'])
+def insert_recipe():
+    recipe = mongo.db.recipe
+    recipe.insert_one(request.form.to_dict())
+    redirect
+    return redirect(url_for('recipes'))
+
+
 @app.route("/register")
 def register():
     return render_template("register.html", view_name="Register")
@@ -40,7 +48,7 @@ def register():
 
 @app.route("/login")
 def login():
-    return render_template("login.html", view_name="Login", 
+    return render_template("login.html", view_name="Login",
         categories=mongo.db.categories.find(),
         difficulty=mongo.db.difficulty.find())
 
