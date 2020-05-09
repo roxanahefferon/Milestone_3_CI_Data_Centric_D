@@ -33,12 +33,19 @@ def add_recipe():
     return render_template("login.html")
 
 
-@app.route('/insert_recipe', methods=['POST'])
+@app.route("/insert_recipe", methods=["POST"])
 def insert_recipe():
     recipe = mongo.db.recipe
     recipe.insert_one(request.form.to_dict())
-    redirect
-    return redirect(url_for('recipes'))
+    return redirect(url_for("recipes"))
+
+
+@app.route("/edit_recipe/<recipe_id>")
+def edit_recipe(recipe_id):
+    the_recipe = mongo.db.recipe.find_one({"_id": ObjectId(recipe_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template('editRecipe.html', recipe=the_recipe,
+                           categories=all_categories)
 
 
 @app.route("/register")

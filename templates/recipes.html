@@ -16,8 +16,32 @@
     <ul class="collapsible">
     {% for recipe in recipe %}
     <li>
-      <div class="collapsible-header"><i class="material-icons">double_arrow</i><h3 class="strong">{{recipe.recipe_name}}</h3></div>
-      <div class="collapsible-body"><span>{{recipe.recipe_description}}</span></div>
+      <div class="collapsible-header">
+
+      <i class="material-icons">double_arrow</i><h5 class="strong">{{recipe.recipe_name}}</h5></div>
+      <div class="collapsible-body">
+      <span>{{recipe.recipe_description}}</span>
+      <hr>
+         <ul>
+         <li>Ingredients</li>
+         <li>{{recipe.ingredients}}</li>
+         <br>
+         <li>Method</li>
+         <li>{{recipe.method}}</li>
+         <br>
+         <li>Serves: {{recipe.servings}}</li>
+         <li>Difficulty: {{recipe.difficulty}}</li>
+         <li>Cooking time: {{recipe.cook_time}} minutes</li>
+         </ul>
+         <div class="col s3">
+                    
+                    <a class="waves-effect waves-light btn btn_small">Edit</a>
+                    <a class="waves-effect waves-light btn btn_small blue">Delete</a>
+                    
+                </div>
+                <div class="task_header col s9">
+                </div>
+      </div>
     </li>
     {% endfor %}
   </ul>
