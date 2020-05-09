@@ -63,6 +63,12 @@ def update_recipe(recipe_id):
     return redirect(url_for('recipes'))
 
 
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    mongo.db.recipe.remove({"_id": ObjectId(recipe_id)})
+    return redirect(url_for("recipes"))
+
+
 @app.route("/register")
 def register():
     return render_template("register.html", view_name="Register")
