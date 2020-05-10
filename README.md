@@ -68,29 +68,19 @@ Deployment and source control was carried out via GitHub and Heroku. The followi
 <li>Log in to Heroku to add config variables including IP, Port, Mongo_DB and Mongo_URI</li> 
 <ul><li>Set Config Vars adding IP and PORT on Heroku app settings</li>
 <li>IP 0.0.0.0 - PORT 5000</li></ul>
-<li>Get Flask to talk to MongoDB - CLI: pip3 install flask-pymongo CLI: pip3 install dnspython</li>
-<li>Add extra libraries to app.py - from flask_pymongo import Pymongo from bson.objectid import ObjectID</li>
-<li>Add DB connection code to app.py</li>
-<li>Test connection to DB again to confirm it's working</li>
-<li>Connect GitHub repository to Heroku using code provided by heroku and github</li>
-<li>Set Debug to False</li>
-<p>Install the Heroku CLI</p>
-Download and install the Heroku CLI.
-If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
-$ heroku login
-<p>Create a new git repository</p>
-Initialize a git repository in a new or existing directory
-$ cd my-project/
-$ git init
-$ heroku git:remote -a data-centric-m3-ci
-<p>Deploy your application</p>
-Commit your code to the repository and deploy it to Heroku using Git.
-$ git add .
-$ git commit -am "make it better"
-$ git push heroku master
-<p>Existing Git repository</p>
-For existing repositories, simply add the heroku remote
-$ heroku git:remote -a data-centric-m3-ci
+<h5>Create a new git repository</h5>
+<p>Initialize a git repository in a new or existing directory</p>
+<p>$ cd my-project/</p>
+<p>$ git init</p>
+<p>$ heroku git:remote -a data-centric-m3-ci</p>
+<h5>Deploy your application</h5>
+<p>Commit your code to the repository and deploy it to Heroku using Git</p>
+<p>$ git add .</p>
+<p>$ git commit -am "make it better"</p>
+<p>$ git push heroku master</p>
+<h5>Existing Git repository<h5>
+<p>For existing repositories, simply add the heroku remote</p>
+<p>$ heroku git:remote -a data-centric-m3-ci</p>
 <h2>Colour scheme</h2>
 <ul>
 <li>#FFFEFE</li>
