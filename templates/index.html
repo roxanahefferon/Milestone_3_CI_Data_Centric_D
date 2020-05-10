@@ -22,10 +22,58 @@
         
         <!-- Pager -->
         <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{ url_for('recipes') }}">Recipes &rarr;</a>
+          <a class="btn btn-primary float-right href=#login-modal class= modal-trigger">Recipes &rarr;</a>
         </div>
       </div>
     </div>
+
+    <!--login/out modal-->
+        
+          <div>
+            <form id="user-form" action="{{url_for('courses') }}" method="POST">
+              <!--check if user logged in, if so give option to log out-->
+              {%if session['user'] %}
+              <h4>Logout</h4>
+              <h6>Currently logged in as {{session['user']}}</h6>
+              <div class="input-field">
+                <input id="username" type="hidden" name="username" value="logout">
+              </div>
+              <div class="modal-footer">
+                <div class="row">
+                  <div class="col s6 m3 offset-m2 ">
+                    <button type="reset" class=" modal-action modal-close waves-effect waves-light btn btn-block hide-on-large-only highlight4-background">Cancel</button>
+                    <button type="reset" class="modal-action modal-close waves-effect waves-light btn-large btn-block hide-on-med-and-down highlight4-background">Cancel</button>
+                  </div>
+                  <div class="col s6 m3 offset-m2">
+                    <button type="submit" class="modal-close waves-effect waves-light btn btn-block hide-on-large-only highlight1-background">Logout</button>
+                    <button type="submit" class="waves-effect waves-light btn-large btn-block hide-on-med-and-down highlight1-background">Logout</button>
+                  </div>
+                </div>
+              </div>
+              {%else%}
+              <!--if not logged in give option to log in-->
+              <h4>Login</h4>
+              <p>Enter your username</p>
+              <div class="input-field">
+                <input class="username" name="username" type="text" required>
+              </div>
+              <div class="modal-footer">
+                <div class="row">
+                  <div class="col s6 m3 offset-m2 ">
+                    <button type="reset" class=" modal-action modal-close waves-effect waves-light btn btn-block hide-on-large-only highlight4-background">Cancel</button>
+                    <button type="reset" class=" modal-action modal-close waves-effect waves-light btn-large btn-block hide-on-med-and-down highlight4-background">Cancel</button>
+                  </div>
+                  <div class="col s6 m3 offset-m2">
+                    <button type="submit" class="modal-close waves-effect waves-light btn btn-block hide-on-large-only highlight1-background">Login</button>
+                    <button type="submit" class="modal-close waves-effect waves-light btn-large btn-large btn-block hide-on-med-and-down highlight1-background">Login</button>
+                  </div>
+                </div>
+              </div>
+              {%endif%}
+            </form>
+          </div>
+    
+
 {% endblock %}
 
 </body>
