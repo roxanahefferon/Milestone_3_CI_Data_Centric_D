@@ -5,13 +5,20 @@ View website on <a href="https://milestone3-data-centric.herokuapp.com/" target=
 A recipe database where viewers can search and view recipes. 
 Users can also add, edit or delete their own recipes.
 <h2>UX</h2>
-This website was created with the intention to store and share recipes with other users. The home page shows the recipes categories, and allows the user to choose between Breakfast, Lunch, Dinner and Snacks. When clicking on any category, the user can view a list of recipes from that specific category. The user can choose a specific recipe from the list where it will be displayed more details about the recipe such as: Category, Serving, Time of preparation, difficulty level, ingredients and cooking method. This page also allows the user to delete or edit the recipe. On the navbar the user have access to all recipes, without categories. There's also a link that brings to a form to add a new recipe.
+This website was created with the intention to store and share recipes with other users, in a simple uncluttered layout, to make it easy to navigate. The user can choose a specific recipe from the list where more details about the recipe will be displayed, such as: category (appetizers, entrees and desserts), ingredients, cooking method, servings, preparation time and difficulty level. This page also allows the user to delete or edit the recipe. Within the navbar the user has access to all recipes. There's also a link that brings to a form to add a new recipe.
+<h3>User Stories</h3>
+<ul>
+<li>I would like to search and view recipes by keywords.</li>
+<li>To add my own recipes into the database.</li>
+<li>Be able to edit and delete my own recipes.</li>
+<li>I like that my own recipes are protected and are only able to be edited or deleted by myself.</li>
+</ul>
 <h2>Features</h2>
 <ul>
-<li>Create new recipes - recipe name, category, level of difficulty, servings, preparation time, method, ingredients.</li>
-<li>Read recipes</li>
-<li>Edit recipes</li>
-<li>Delete recipes</li>
+<li><strong>C</strong>reate new recipes - recipe name, category, level of difficulty, servings, preparation time, method, ingredients.</li>
+<li><strong>R</strong>ead recipes</li>
+<li><strong>U</strong>pdate recipes</li>
+<li><strong>D</strong>elete recipes</li>
 </ul>
 <h2>Technologies Used</h2>
 <ul>
@@ -103,7 +110,7 @@ $ heroku git:remote -a data-centric-m3-ci
 <li> <a href="https://unsplash.com/@foodiesfeed?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Jakub Kapusnak</a> </li>
 <li> <a href="https://unsplash.com/@lvnatikk?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Lily Banse</a></li>
 <li> <a href="https://unsplash.com/@imaxpanama?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Max Panamá</a></li>
-<h2>MongoDB</h2>
+<h2>MongoDB Structure</h2>
 <p>recipe_manager.recipe</p>
 {"_id":{"$oid":"5eb53ab9f5a3f431259becc4"},
 "category_name":"",
@@ -126,6 +133,14 @@ $ heroku git:remote -a data-centric-m3-ci
 {"_id":{"$oid":"5eb5d7624fahe9a90d0ele7e"},
 "username":"",
 "password":""}"}
-
+<h2>Validation/<h2>
+<h3>CSS</h3>
+<a href="https://jigsaw.w3.org/css-validator/" target="_blank">Jigsaw</a> was used for validation of css code and did not generate significant errors
+<h3>HTML</h3>
+<a href="https://validator.w3.org/" target="_blank">HTML validator</a> was used for validation of HTML code. Errors were thrown on the raw HTML code by the use of Jinja2 templating language which was not recognised by the validator.
+<h3>jQuery</h3>
+<a href="https://codebeautify.org/jsvalidate" target="_blank">Code Beautify</a> and <a href="https://jshint.com/">JShint</a> target="_blank"> were used for validation of jQuery code. No significant erros were generated
+<h3>Python</h3>
+  <a href="http://pep8online.com/" target="_blank">PEP8</a> was used to validate Python code and did not generate any errors.
 
 
