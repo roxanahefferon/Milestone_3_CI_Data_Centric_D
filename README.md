@@ -71,22 +71,21 @@ Deployment and source control was carried out via GitHub and Heroku. Following s
 24.	Test connection to DB again to confirm it's working
 25.	Connect GitHub repository to Heroku using code provided by heroku and github.
 26.	Set Debug to False
-Install the Heroku CLI
+<p>Install the Heroku CLI</p>
 Download and install the Heroku CLI.
 If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
 $ heroku login
-Create a new git repository
+<p>Create a new git repository</p>
 Initialize a git repository in a new or existing directory
 $ cd my-project/
 $ git init
 $ heroku git:remote -a data-centric-m3-ci
-Deploy your application
+<p>Deploy your application</p>
 Commit your code to the repository and deploy it to Heroku using Git.
 $ git add .
 $ git commit -am "make it better"
 $ git push heroku master
-________________________________________
-Existing Git repository
+<p>Existing Git repository</p>
 For existing repositories, simply add the heroku remote
 $ heroku git:remote -a data-centric-m3-ci
 
@@ -133,13 +132,13 @@ $ heroku git:remote -a data-centric-m3-ci
 {"_id":{"$oid":"5eb5d7624fahe9a90d0ele7e"},
 "username":"",
 "password":""}"}
-<h2>Validation/<h2>
+<h2>Validation<h2>
 <h3>CSS</h3>
-<a href="https://jigsaw.w3.org/css-validator/" target="_blank">Jigsaw</a> was used for validation of css code and did not generate significant errors
+<a href="https://jigsaw.w3.org/css-validator/" target="_blank">Jigsaw</a> was used for validation of css code and did not generate significant errors.
 <h3>HTML</h3>
 <a href="https://validator.w3.org/" target="_blank">HTML validator</a> was used for validation of HTML code. Errors were thrown on the raw HTML code by the use of Jinja2 templating language which was not recognised by the validator.
 <h3>jQuery</h3>
-<a href="https://codebeautify.org/jsvalidate" target="_blank">Code Beautify</a> and <a href="https://jshint.com/">JShint</a> target="_blank"> were used for validation of jQuery code. No significant erros were generated
+<a href="https://codebeautify.org/jsvalidate" target="_blank">Code Beautify</a> and <a href="https://jshint.com/">JShint</a> target="_blank"> were used for validation of jQuery code. No significant erros were generated.
 <h3>Python</h3>
   <a href="http://pep8online.com/" target="_blank">PEP8</a> was used to validate Python code and did not generate any errors.
 
