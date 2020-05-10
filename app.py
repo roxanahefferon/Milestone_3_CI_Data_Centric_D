@@ -3,18 +3,17 @@ import json
 from flask import Flask, render_template, request, flash, url_for, redirect, session
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from datetime import datetime
 
 from os import path
 if path.exists("env.py"):
     import env
 
-""" App configuration
-"""
+""" App configuration """
 
 app = Flask(__name__)
 
-""" MongoDB configuration
-"""
+""" MongoDB configuration """
 
 app.config["MONGO_DBNAME"] = os.environ.get('MONGO_DBNAME')
 app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
@@ -22,15 +21,13 @@ app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-""" DB Collections
-"""
+""" DB Collections """
 
 users_coll = mongo.db.users
 recipes_coll = mongo.db.recipe
 categories_coll = mongo.db.categories
 
-""" User Authentication - Login
-"""
+""" User Authentication - Login """
 
 
 @app.route("/")
@@ -121,7 +118,43 @@ def get_in_touch():
         ))
     return render_template("get_in_touch.html", page_title="Get_in_touch")
 
+""" xxx """
 
+messages = []
+
+def add_messages(username, message):
+    """Add messages to the `messages` list"""
+    now = datetime.now().strftime("%H:%M:%S")
+    messages.append("({}) {}: {}".format(now, username, message))
+
+
+def get_all_messages():
+    """Get all of the messages and separate them with a `br`"""
+    return "<br>".join(messages)
+
+@app.route("/test", methods=["GET", "POST"])
+def test():
+    """Main page with instructions"""
+    if request.method == "POST":
+        session["username"] = request.form["username"]
+
+    if "username" in session:
+        return redirect(session["username"])
+
+    return render_template("test.html")
+
+
+@app.route("/<username>")
+def user(username):
+    """Display chat messages"""
+    return "<h1>Welcome, {0}</h1>{1}".format(username, get_all_messages())
+
+
+@app.route("/<username>/<message>")
+def send_message(username, message):
+    """Create a new message and redirect back to the chat page"""
+    add_messages(username, message)
+    return redirect("/" + username)
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
