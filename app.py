@@ -32,28 +32,6 @@ categories_coll = mongo.db.categories
 """ User Authentication - Login
 """
 
-@app.route("/check_user", methods=['POST', 'GET'])
-def check_user():
-    # called on submitting login request modal form
-    usersdb = mongo.db.usersDB
-    user = request.form.to_dict()
-
-    # logout button sends value "logout". If logout request received delete the
-    # user session variable
-    if user['username'] == "logout":
-        session.pop('user')
-    else:
-        # set the user session variable to the name submitted
-        session["user"] = user['username']
-        # check if the user exists in the userDB - if not (by counting
-        # results = 0) create user
-        if usersdb.find({"name": user['username']}).count() == 0:
-            usersdb.insert({'name': user['username'], 'favourites': []})
-
-    # return to the index page. This is important to ensure recipes are only
-    # added or deleted when the user is logged in.
-    return redirect(url_for('index'))
-
 
 @app.route("/")
 def index():
@@ -111,10 +89,6 @@ def delete_recipe(recipe_id):
     mongo.db.recipe.remove({"_id": ObjectId(recipe_id)})
     return redirect(url_for("recipes"))
 
-
-@app.route("/register")
-def register():
-    return render_template("register.html", view_name="Register")
 
 
 @app.route("/login")
