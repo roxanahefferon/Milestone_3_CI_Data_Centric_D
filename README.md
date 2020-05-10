@@ -122,7 +122,7 @@ Deployment and source control was carried out via GitHub and Heroku. The followi
 <p>{"_id":{"$oid":"5eb5d7624fahe9a90d0ele7e"},</p>
 <p>"username":"",</p>
 <p>"password":""}"}</p>
-<h2>Validation<h2>
+<h2>Validation</h2> 
 <h3>CSS</h3>
 <a href="https://jigsaw.w3.org/css-validator/" target="_blank">Jigsaw</a> was used for validation of css code and did not generate significant errors.
 <h3>HTML</h3>
@@ -141,7 +141,6 @@ Deployment and source control was carried out via GitHub and Heroku. The followi
 <li> <a href="https://unsplash.com/@foodiesfeed?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Jakub Kapusnak</a> </li>
 <li> <a href="https://unsplash.com/@lvnatikk?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Lily Banse</a></li>
 <li> <a href="https://unsplash.com/@imaxpanama?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Max Panamá</a></li>
-<ul>
 <h2>Acknowledgements</h2>
 <ul>
 <li>The Code Institute Slack community, where I have found many answers to many questions and learned a great deal by reading through the posts.</li>
