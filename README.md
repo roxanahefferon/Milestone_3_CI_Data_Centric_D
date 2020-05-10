@@ -44,35 +44,36 @@ The responsiveness was tested on every page.
 Every link was tested and works properly. 
 All forms handle empty input fields.
 <h2>Deployment</h2>
-Deployment and source control was carried out via GitHub and Heroku. Following steps were taken to deploy the website:
-1.	Database was created in MongoDB Atlas.
-2.	Project workspace was created in GitPod. In this workspace: Flask was installed - pip3 install flask.
-3.	Setup app.py file and imported flask and os - from flask import Flask. import os
-4.	Created an instance of flask - app = flask(__name__)
-5.	Inside the app run() function set the host, ip and debug=true
-6.	Create a new Heroku App - unique name and EU Server
-7.	In GitPod login to Heroku through CLI to confirm existance of app. CLI: heroku login. 
-8.	gitpod /workspace/M3-CI-DCD $ heroku login -i
-9.	heroku: Enter your login credentials
-10.	Email: roxana.hefferon@gmail.com
-11.	Password: **********
-12.	CLI: heroku apps.
-13.	Create a git repository in GitPod. CLI: git init. CLI: git add . CLI: git commit -m "Initial Commit"
-14.	Connect GitPod to Heroku. Use code found on Heroku. CLI - $heroku git remote -a 
-15.	Create requirements.txt file - CLI: pip3 freeze --local > requirements.txt
-16.	Create Procfile - echo web:python app.py>Procfile
-17.	Add and Commit to Git Repository
-18.	Push to Heroku using code supplied by Heroku
-19.	CLI - heroku ps:scale web=1 Command to tell Heroku to run the app
-20.	Log in to Heroku to add config variables including IP, Port, Mongo_DB and Mongo_URI. 
+Deployment and source control was carried out via GitHub and Heroku. The following steps were taken to deploy the website:
+<ul>
+<li>Database was created in MongoDB Atlas</li>
+<li>Project workspace was created in GitPod. In this workspace: Flask was installed - pip3 install flask</li>
+<li>Setup app.py file and imported flask and os - from flask import Flask. import os</li>
+<li>Created an instance of flask - app = flask(__name__)</li>
+<li>Inside the app run() function set the host, ip and debug=true</li>
+<li>Create a new Heroku App - unique name and EU Server</li>
+<li>In GitPod login to Heroku through CLI to confirm existance of app. CLI: heroku login</li> 
+<li>gitpod /workspace/M3-CI-DCD $ heroku login -i</li>
+<li>heroku: Enter your login credentials</li>
+<li>Email: roxana.hefferon@gmail.com</li>
+<li>Password: **********</li>
+<li>CLI: heroku apps</li>
+<li>Create a git repository in GitPod. CLI: git init. CLI: git add . CLI: git commit -m "Initial Commit"</li>
+<li>Connect GitPod to Heroku. Use code found on Heroku. CLI - $heroku git remote -a</li>
+<li>Create requirements.txt file - CLI: pip3 freeze --local > requirements.txt</li>
+<li>Create Procfile - echo web:python app.py>Procfile</li>
+<li>Add and Commit to Git Repository</li>
+<li>Push to Heroku using code supplied by Heroku.</li>
+<li>CLI - heroku ps:scale web=1 Command to tell Heroku to run the app</li>
+<li>Log in to Heroku to add config variables including IP, Port, Mongo_DB and Mongo_URI</li> 
 <ul><li>Set Config Vars adding IP and PORT on Heroku app settings</li>
 <li>IP 0.0.0.0 - PORT 5000</li></ul>
-21.	Get Flask to talk to MongoDB - CLI: pip3 install flask-pymongo CLI: pip3 install dnspython
-22.	Add extra libraries to app.py - from flask_pymongo import Pymongo from bson.objectid import ObjectID
-23.	Add DB connection code to app.py
-24.	Test connection to DB again to confirm it's working
-25.	Connect GitHub repository to Heroku using code provided by heroku and github.
-26.	Set Debug to False
+<li>Get Flask to talk to MongoDB - CLI: pip3 install flask-pymongo CLI: pip3 install dnspython</li>
+<li>Add extra libraries to app.py - from flask_pymongo import Pymongo from bson.objectid import ObjectID</li>
+<li>Add DB connection code to app.py</li>
+<li>Test connection to DB again to confirm it's working</li>
+<li>Connect GitHub repository to Heroku using code provided by heroku and github</li>
+<li>Set Debug to False</li>
 <p>Install the Heroku CLI</p>
 Download and install the Heroku CLI.
 If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
@@ -90,9 +91,7 @@ $ git push heroku master
 <p>Existing Git repository</p>
 For existing repositories, simply add the heroku remote
 $ heroku git:remote -a data-centric-m3-ci
-
 <h2>Colour scheme</h2>
-
 <ul>
 <li>#FFFEFE</li>
 <li>#F2A535</li>
@@ -100,8 +99,6 @@ $ heroku git:remote -a data-centric-m3-ci
 <li>#979797</li>
 <li>#F8CD8E</li>
 </ul>
-
-
 <h2>Credits</h2>
 <p>Logo created in <a href="https://www.canva.com/">Canva</a></p>
 <p>Favicon created in <a href="https://www.favicon-generator.org/">Favicon</a></p>
