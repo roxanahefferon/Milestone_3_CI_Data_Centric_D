@@ -43,11 +43,6 @@ def recipes():
     return render_template("recipes.html", recipe=mongo.db.recipe.find().sort("recipe_name"))
 
 
-@app.route('/get_categories')
-def get_categories():
-    return render_template('categories.html',
-                           categories=mongo.db.categories.find())
-
 
 @app.route("/add_recipe")
 def add_recipe():
