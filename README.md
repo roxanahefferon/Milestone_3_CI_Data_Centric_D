@@ -135,12 +135,13 @@ Deployment and source control was carried out via GitHub and Heroku. The followi
 <p>Logo created in <a href="https://www.canva.com/">Canva</a></p>
 <p>Favicon created in <a href="https://www.favicon-generator.org/">Favicon</a></p>
 <p>Images from <a href="www.unsplash.com">Unsplash</a></p>
-<p>The recipes used to start the database were taken from <a href="https://www.jamieoliver.com/" target="_blank">Jamie Oliver's Website</a>
 <ul>
 <li> <a href="https://unsplash.com/@brookelark?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Brooke Lark</a></li>
 <li> <a href="https://unsplash.com/@foodiesfeed?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Jakub Kapusnak</a> </li>
 <li> <a href="https://unsplash.com/@lvnatikk?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Lily Banse</a></li>
 <li> <a href="https://unsplash.com/@imaxpanama?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Max Panamá</a></li>
+</ul>
+<p>The recipes used to start the database were taken from <a href="https://www.jamieoliver.com/" target="_blank">Jamie Oliver's Website</a></p>
 <h2>Acknowledgements</h2>
 <ul>
 <li>The Code Institute Slack community, where I have found many answers to many questions and learned a great deal by reading through the posts.</li>
