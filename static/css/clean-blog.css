@@ -35,7 +35,7 @@ a {
 }
 
 a:focus, a:hover {
-  color: #0085A1;
+  color: #26a69a;
 }
 
 blockquote {
@@ -62,13 +62,13 @@ blockquote {
 
 ::-moz-selection {
   color: #fff;
-  background: #0085A1;
+  background: #26a69a;
   text-shadow: none;
 }
 
 ::selection {
   color: #fff;
-  background: #0085A1;
+  background: #26a69a;
   text-shadow: none;
 }
 
@@ -154,13 +154,13 @@ img::-moz-selection {
     color: #212529;
   }
   #mainNav.is-fixed .navbar-brand:focus, #mainNav.is-fixed .navbar-brand:hover {
-    color: #0085A1;
+    color: #26a69a;
   }
   #mainNav.is-fixed .navbar-nav > li.nav-item > a {
     color: #212529;
   }
   #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
-    color: #0085A1;
+    color: #26a69a;
   }
   #mainNav.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -174,7 +174,7 @@ header.masthead {
   background-color: #868e96;
   background-attachment: scroll;
   position: relative;
-  background-size: cover;
+  background-size: contain;
 }
 
 header.masthead .overlay {
@@ -273,7 +273,7 @@ header.masthead .post-heading .meta a {
 
 .post-preview > a:focus, .post-preview > a:hover {
   text-decoration: none;
-  color: #0085A1;
+  color: #26a69a;
 }
 
 .post-preview > a > .post-title {
@@ -282,27 +282,6 @@ header.masthead .post-heading .meta a {
   margin-bottom: 10px;
 }
 
-.post-preview > a > .post-subtitle {
-  font-weight: 300;
-  margin: 0 0 10px;
-}
-
-.post-preview > .post-meta {
-  font-size: 18px;
-  font-style: italic;
-  margin-top: 0;
-  color: #868e96;
-}
-
-.post-preview > .post-meta > a {
-  text-decoration: none;
-  color: #212529;
-}
-
-.post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
-  text-decoration: underline;
-  color: #0085A1;
-}
 
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
@@ -362,7 +341,7 @@ header.masthead .post-heading .meta a {
 }
 
 .floating-label-form-group-with-focus label {
-  color: #0085A1;
+  color: #26a69a;
 }
 
 form .form-group:first-child .floating-label-form-group {
@@ -401,8 +380,8 @@ footer .copyright {
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #fff;
-  background-color: #00657b !important;
-  border-color: #00657b !important;
+  background-color: #979797;
+  border-color: #979797;
 }
 
 .btn-lg {

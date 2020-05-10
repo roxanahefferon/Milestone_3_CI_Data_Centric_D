@@ -85,7 +85,6 @@ def delete_recipe(recipe_id):
     return redirect(url_for("recipes"))
 
 
-
 @app.route("/login")
 def login():
     return render_template("login.html", view_name="Login",
