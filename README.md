@@ -20,7 +20,10 @@ This website was created with the intention to store and share recipes with othe
 <li><strong>U</strong>pdate recipes</li>
 <li><strong>D</strong>elete recipes</li>
 </ul>
-<h2>Technologies Used</h2>
+<h2>Features left to implement</h2>
+<h4>User authentication</h4>
+As it is any user can update and delete recipes, which could lead to the recipe information being amended/deleted maliciously. In order to amend this I would like to have implemented a user authentication system that would mean only the original author of the recipe has the power to edit or remove it.
+<h2>Technologies used</h2>
 <ul>
 <li><a href ="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
 Bootstrap is the most popular CSS Framework for developing responsive and mobile-first websites.
@@ -41,7 +44,6 @@ The responsiveness was tested on every page.
 Every link was tested and works properly. 
 All forms handle empty input fields.
 <h2>Deployment</h2>
-
 Deployment and source control was carried out via GitHub and Heroku. Following steps were taken to deploy the website:
 1.	Database was created in MongoDB Atlas.
 2.	Project workspace was created in GitPod. In this workspace: Flask was installed - pip3 install flask.
@@ -89,7 +91,7 @@ $ git push heroku master
 For existing repositories, simply add the heroku remote
 $ heroku git:remote -a data-centric-m3-ci
 
-<h2>Colour Scheme</h2>
+<h2>Colour scheme</h2>
 
 <ul>
 <li>#FFFEFE</li>
