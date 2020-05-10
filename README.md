@@ -8,10 +8,9 @@ Users can also add, edit or delete their own recipes.
 This website was created with the intention to store and share recipes with other users, in a simple uncluttered layout, to make it easy to navigate. The user can choose a specific recipe from the list where more details about the recipe will be displayed, such as: category (appetizers, entrees and desserts), ingredients, cooking method, servings, preparation time and difficulty level. This page also allows the user to delete or edit the recipe. Within the navbar the user has access to all recipes. There's also a link that brings to a form to add a new recipe.
 <h3>User Stories</h3>
 <ul>
-<li>I would like to search and view recipes by keywords.</li>
-<li>To add my own recipes into the database.</li>
-<li>Be able to edit and delete my own recipes.</li>
-<li>I like that my own recipes are protected and are only able to be edited or deleted by myself.</li>
+<li>As a user I would like to search and view recipes by keywords or categories.</li>
+<li>I would like to add my own recipes into the database.</li>
+<li>I would like to able to edit and delete recipes.</li>
 </ul>
 <h2>Features</h2>
 <ul>
@@ -23,6 +22,8 @@ This website was created with the intention to store and share recipes with othe
 <h2>Features left to implement</h2>
 <h4>User authentication</h4>
 As it is any user can update and delete recipes, which could lead to the recipe information being amended/deleted maliciously. In order to amend this I would like to have implemented a user authentication system that would mean only the original author of the recipe has the power to edit or remove it.
+<h4>Pagination</h4>
+To handle that the number of recipe results doesn't become too long, as the database grows.
 <h2>Technologies used</h2>
 <ul>
 <li><a href ="https://getbootstrap.com/" target="_blank">Bootstrap</a></li>
@@ -68,6 +69,10 @@ Deployment and source control was carried out via GitHub and Heroku. The followi
 <li>Log in to Heroku to add config variables including IP, Port, Mongo_DB and Mongo_URI</li> 
 <ul><li>Set Config Vars adding IP and PORT on Heroku app settings</li>
 <li>IP 0.0.0.0 - PORT 5000</li></ul>
+<h5>Install the Heroku CLI</h5>
+<p>Download and install the Heroku CLI</p>
+<p>If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key</p>
+<p>$ heroku login</p>
 <h5>Create a new git repository</h5>
 <p>Initialize a git repository in a new or existing directory</p>
 <p>$ cd my-project/</p>
@@ -81,46 +86,42 @@ Deployment and source control was carried out via GitHub and Heroku. The followi
 <h5>Existing Git repository<h5>
 <p>For existing repositories, simply add the heroku remote</p>
 <p>$ heroku git:remote -a data-centric-m3-ci</p>
-<h2>Colour scheme</h2>
+<h3>Running the code locally</h3>
 <ul>
-<li>#FFFEFE</li>
-<li>#F2A535</li>
-<li>#2A2A2A</li>
-<li>#979797</li>
-<li>#F8CD8E</li>
+<li>Under the repository name on GitHub, click Clone or download</li>
+<li>In the Clone with HTTPs section, click the icon beside the URL to copy the clone URL for the repository</li>
+<li>Change the current working directory to the location where you want the cloned directory to be made</li>
+<li>Type git clone, and then paste the URL you copied for the repository</li>
+<li>Press Enter. Your local clone will be created</li>
+<li>Set up a virtual environment</li>
+<li>Install the packages in requirements.txt by typing pip3 install -r requirements.txt in the CLI</li>
+<li>Set the IP address to 127.0.0.1 and the PORT to 5000</li>
 </ul>
-<h2>Credits</h2>
-<p>Logo created in <a href="https://www.canva.com/">Canva</a></p>
-<p>Favicon created in <a href="https://www.favicon-generator.org/">Favicon</a></p>
-<p>Images <a href="www.unsplash.com">Unsplash</a></p>
-<ul>
-<li> <a href="https://unsplash.com/@brookelark?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Brooke Lark</a></li>
-<li> <a href="https://unsplash.com/@foodiesfeed?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Jakub Kapusnak</a> </li>
-<li> <a href="https://unsplash.com/@lvnatikk?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Lily Banse</a></li>
-<li> <a href="https://unsplash.com/@imaxpanama?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Max Panamá</a></li>
 <h2>MongoDB Structure</h2>
 <p>recipe_manager.recipe</p>
-{"_id":{"$oid":"5eb53ab9f5a3f431259becc4"},
-"category_name":"",
-"recipe_name":"",
-"recipe_description":"",
-"is_vegetarian":"",
-"ingredientes":"",
-"method":"",
-"servings":"",
-"difficulty":"",
-"cook_time":""
-}
+<p>{"_id":{"$oid":"5eb53ab9f5a3f431259becc4"},</p>
+<p>"category_name":"",</p>
+<p>"recipe_name":"",</p>
+<p>"recipe_description":"",</p>
+<p>"is_vegetarian":"",</p>
+<p>"ingredientes":"",</p>
+<p>"method":"",</p>
+<p>"servings":"",</p>
+<p>"difficulty":"",</p>
+<p>"cook_time":""}"}</p>
+<br>
 <p>recipe_manager.categories</p>
-{"_id":{"$oid":"5eb5d6014faee9a32d0ebe3e"},
-"category_name":"
+<p>{"_id":{"$oid":"5eb5d6014faee9a32d0ebe3e"},</p>
+<p>"category_name":""}"}</p>
+<br>
 <p>recipe_manager.difficulty</p>
-{"_id":{"$oid":"5eb5da874faee9a32d0ebe41"},
-"difficulty_level":""}"}
+{"_id":{"$oid":"5eb5da874faee9a32d0ebe41"},</p>
+"difficulty_level":""}"}</p>
+<br>
 <p>recipe_manager.users</p>
-{"_id":{"$oid":"5eb5d7624fahe9a90d0ele7e"},
-"username":"",
-"password":""}"}
+<p>{"_id":{"$oid":"5eb5d7624fahe9a90d0ele7e"},</p>
+<p>"username":"",</p>
+<p>"password":""}"}</p>
 <h2>Validation<h2>
 <h3>CSS</h3>
 <a href="https://jigsaw.w3.org/css-validator/" target="_blank">Jigsaw</a> was used for validation of css code and did not generate significant errors.
@@ -129,6 +130,23 @@ Deployment and source control was carried out via GitHub and Heroku. The followi
 <h3>jQuery</h3>
 <a href="https://codebeautify.org/jsvalidate" target="_blank">Code Beautify</a> and <a href="https://jshint.com/">JShint</a> target="_blank"> were used for validation of jQuery code. No significant erros were generated.
 <h3>Python</h3>
-  <a href="http://pep8online.com/" target="_blank">PEP8</a> was used to validate Python code and did not generate any errors.
+<a href="http://pep8online.com/" target="_blank">PEP8</a> was used to validate Python code and did not generate any errors.
+<h2>Credits</h2>
+<p>Logo created in <a href="https://www.canva.com/">Canva</a></p>
+<p>Favicon created in <a href="https://www.favicon-generator.org/">Favicon</a></p>
+<p>Images from <a href="www.unsplash.com">Unsplash</a></p>
+<p>The recipes used to start the database were taken from <a href="https://www.jamieoliver.com/" target="_blank">Jamie Oliver's Website</a>
+<ul>
+<li> <a href="https://unsplash.com/@brookelark?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Brooke Lark</a></li>
+<li> <a href="https://unsplash.com/@foodiesfeed?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Jakub Kapusnak</a> </li>
+<li> <a href="https://unsplash.com/@lvnatikk?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Lily Banse</a></li>
+<li> <a href="https://unsplash.com/@imaxpanama?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Max Panamá</a></li>
+<ul>
+<h2>Acknowledgements</h2>
+<ul>
+<li>The Code Institute Slack community, where I have found many answers to many questions and learned a great deal by reading through the posts.</li>
+<li>W3SCHOOLS website for easy explanation of code.</li>
+<li>Stack Overflow, a good source of knowledge.</li>
+</ul>
 
 
