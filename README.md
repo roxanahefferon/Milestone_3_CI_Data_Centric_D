@@ -131,6 +131,8 @@ Deployment and source control was carried out via GitHub and Heroku. The followi
 <a href="https://codebeautify.org/jsvalidate" target="_blank">Code Beautify</a> and <a href="https://jshint.com/">JShint</a> target="_blank"> were used for validation of jQuery code. No significant erros were generated.
 <h3>Python</h3>
 <a href="http://pep8online.com/" target="_blank">PEP8</a> was used to validate Python code and did not generate any errors.
+<h3>HTML Beautifier</h3>
+<a href="http://minifycode.com/html-beautifier/" target="_blank">Minify Code</a> was used to beautify HTML code.
 <h2>Credits</h2>
 <p>Logo created in <a href="https://www.canva.com/">Canva</a></p>
 <p>Favicon created in <a href="https://www.favicon-generator.org/">Favicon</a></p>
@@ -148,5 +150,8 @@ Deployment and source control was carried out via GitHub and Heroku. The followi
 <li>W3SCHOOLS website for easy explanation of code.</li>
 <li>Stack Overflow, a good source of knowledge.</li>
 </ul>
+<h2>Disclaimer</h2>
+For educational purposes only.
+
 
 

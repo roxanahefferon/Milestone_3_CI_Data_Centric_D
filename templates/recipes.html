@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Grub's Up!</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Grub's Up!</title>
 </head>
+
 <body>
-
-{% extends 'base.html' %}
-{% block content %}
-
-    <h1>{{ view_name}}</h1>
-
-    <ul class="collapsible">
-    {% for recipe in recipe %}
-    <li>
-      <div class="collapsible-header">
-
-      <i class="material-icons">double_arrow</i><h5 class="strong">{{recipe.recipe_name}}</h5></div>
-      <div class="collapsible-body">
-      <span>{{recipe.recipe_description}}</span>
-      <hr>
-         <ul>
-         <li>Ingredients</li>
-         <li>{{recipe.ingredients}}</li>
-         <br>
-         <li>Method</li>
-         <li>{{recipe.method}}</li>
-         <br>
-         <li>Serves: {{recipe.servings}}</li>
-         <li>Difficulty: {{recipe.difficulty}}</li>
-         <li>Cooking time: {{recipe.cook_time}} minutes</li>
-         </ul>
-         <div class="col s3">
-                    
-                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn btn_small">Edit</a>
-                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn btn_small">Delete</a>
-                    
-                </div>
-                <div class="task_header col s9">
-                </div>
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
-
- 
-
-{% endblock %}
-
+	{% extends 'base.html' %}
+	{% block content %}
+	<h1>{{ view_name}}</h1>
+	<ul class="collapsible">
+		{% for recipe in recipe %}
+		<li>
+			<div class="collapsible-header">
+				<i class="material-icons">double_arrow</i>
+				<h5 class="recipename">{{recipe.recipe_name}}</h5>
+			</div>
+			<div class="collapsible-body">
+				<span class="description">{{recipe.recipe_description}}</span>
+				<hr>
+				<ul>
+					<li class="ingredients">Ingredients</li>
+					<li>{{recipe.ingredients}}</li>
+					<br>
+					<li class="method">Method</li>
+					<li>{{recipe.method}}</li>
+					<br>
+					<li class="servings">Serves: {{recipe.servings}}</li>
+					<li class="difficulty">Difficulty: {{recipe.difficulty}}</li>
+					<li class="cookingtime">Cooking time: {{recipe.cook_time}} minutes</li>
+				</ul>
+				<div class="col s3">
+					<a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+						class="waves-effect waves-light btn btn_small">Edit</a>
+					<a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+						class="waves-effect waves-light btn btn_small">Delete</a>
+				</div>
+				<div class="task_header col s9">
+				</div>
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+	{% endblock %}
 </body>
+
 </html>

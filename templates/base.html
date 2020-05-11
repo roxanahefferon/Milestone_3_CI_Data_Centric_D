@@ -27,7 +27,7 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
 		<div class="container">
-			<a class="navbar-brand" href="{{ url_for('index') }}">Grub's Up!</a>
+			<a class="navbar-brand" img src="static/img/GrubsUpLogo.png" width="100" alt="GrubsUp-logo" href="#"></a>
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 	        Menu<i class="fas fa-bars"></i>
 	      </button>
@@ -37,7 +37,7 @@
 						<a class="nav-link" href="{{ url_for('index') }}">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{{ url_for('login') }}">Login</a>
+						<a class="nav-link" href="{{ url_for('login') }}">Login/Add Recipe</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="{{ url_for('recipes') }}">Recipes</a>
@@ -54,7 +54,7 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
             <h1>Grub's Up</h1>
-            <span class="subheading">A Cooking Journal</span>
+            <span class="subheading">Cooking Journal</span>
           </div>
         </div>
       </div>
@@ -77,25 +77,25 @@
           <ul class="list-inline text-center">
             <li class="list-inline-item">
               <a href="https://www.instagram.com/roxheff/?hl=en" target="_blank">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                <span class="fa-stack fa-lg sr-only">
+                  <i class="fas fa-circle fa-stack-2x" aria_hidden="true"></i>
+                  <i class="fab fa-instagram fa-stack-1x fa-inverse" aria_hidden="true"></i>
                 </span>
               </a>
             </li>
             <li class="list-inline-item">
               <a href="https://www.facebook.com/roxana.degiorgis" target="_blank">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                <span class="fa-stack fa-lg sr-only">
+                  <i class="fas fa-circle fa-stack-2x" aria_hidden="true"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse" aria_hidden="true"></i>
                 </span>
               </a>
             </li>
             <li class="list-inline-item">
               <a href="https://github.com/roxanahefferon" target="_blank"> 
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                <span class="fa-stack fa-lg sr-only">
+                  <i class="fas fa-circle fa-stack-2x" aria_hidden="true"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse" aria_hidden="true"></i>
                 </span>
               </a>
             </li>
