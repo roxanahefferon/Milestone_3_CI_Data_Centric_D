@@ -134,15 +134,15 @@ Deployment and source control was carried out via GitHub and Heroku. The followi
 <h3>HTML Beautifier</h3>
 <a href="http://minifycode.com/html-beautifier/" target="_blank">Minify Code</a> was used to beautify HTML code.
 <h2>Credits</h2>
+<p>The recipes used to start the database were taken from <a href="https://www.jamieoliver.com/" target="_blank">Jamie Oliver's Website</a></p>
 <p>Logo created in <a href="https://www.canva.com/">Canva</a></p>
 <p>Favicon created in <a href="https://www.favicon-generator.org/">Favicon</a></p>
 <a href="https://images.unsplash.com/photo-1517953720815-3ad3488a67f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80" target="_blank">Image</a> from <a href="www.unsplash.com">Unsplash</a>
-<p>The recipes used to start the database were taken from <a href="https://www.jamieoliver.com/" target="_blank">Jamie Oliver's Website</a></p>
 <h2>Acknowledgements</h2>
 <ul>
-<li>The Code Institute Slack community, where I have found many answers to many questions and learned a great deal by reading through the posts.</li>
-<li>W3SCHOOLS website for easy explanation of code.</li>
-<li>Stack Overflow, a good source of knowledge.</li>
+<li>The Code Institute Slack community, where I have found many answers to many questions and learned a huge amount by reading through the posts.</li>
+<li>W3SCHOOLS.</li>
+<li>Stack Overflow.</li>
 </ul>
 <h2>Disclaimer</h2>
 For educational purposes only.
