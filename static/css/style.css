@@ -1,8 +1,5 @@
-}.col-md-5 img {
-    width: 100%;
-}
-
-.btn_small {
+.btn_small 
+.btn-primary{
     color: #26a69a;
     margin-top: 10px;
 }

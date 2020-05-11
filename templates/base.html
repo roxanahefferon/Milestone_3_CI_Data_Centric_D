@@ -4,51 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <!-- Link to CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ url_for ('static', filename='css/clean-blog.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
-    <title>Grub's Up!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
+
     <!-- Materialize compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
     <!-- Load Bootstrap core CSS -->
     <link rel="stylesheet" href="{{ url_for ('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" type="text/css" />
+    <title>Grub's Up!</title>
     <link rel="shortcut icon" type="image/png" href="{{ url_for ('static', filename='img/favicon.png') }}">
+    
     <!-- Custom fonts -->
-  <link href="{{ url_for ('static', filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for ('static', filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand" href="{{ url_for('index') }}">Grub's Up!</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('login') }}">Add Recipe</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('courses') }}">Courses</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('recipes') }}">Recipes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('get_in_touch') }}">Get in touch</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand" href="{{ url_for('index') }}">Grub's Up!</a>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	        Menu<i class="fas fa-bars"></i>
+	      </button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('index') }}">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('login') }}">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('recipes') }}">Recipes</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
   <!-- Page Header -->
   <header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1517953720815-3ad3488a67f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80')">
     <div class="overlay"></div>

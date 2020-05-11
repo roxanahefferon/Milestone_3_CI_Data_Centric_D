@@ -21,14 +21,6 @@ app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-""" DB Collections """
-
-users_coll = mongo.db.users
-recipes_coll = mongo.db.recipe
-categories_coll = mongo.db.categories
-
-""" User Authentication - Login """
-
 
 @app.route("/")
 def index():
@@ -89,70 +81,8 @@ def login():
         difficulty=mongo.db.difficulty.find())
 
 
-@app.route("/courses", methods=["POST"])
-def courses():
-    data = []
-
-    with open("data/categories.json", "r") as json_data:
-        data = json.load(json_data)
-    return render_template("courses.html", view_name="Courses", categories=data)
 
 
-@app.route('/courses/<option_name>')
-def courses_option(option_name):
-    option = {}
-    with open("data/categories.json", "r") as json_data:
-        data = json.load(json_data)
-        for obj in data:
-            if obj["url"] == option_name:
-                option = obj
-
-    return render_template("selected.html", option=option)
-
-
-@app.route('/get_in_touch', methods=["GET", "POST"])
-def get_in_touch():
-    if request.method == "POST":
-        flash("Thanks {}, we have received your message".format(
-            request.form["name"]
-        ))
-    return render_template("get_in_touch.html", page_title="Get_in_touch")
-
-""" xxx """
-
-messages = []
-
-def add_messages(username, message):
-    """Add messages to the `messages` list"""
-    now = datetime.now().strftime("%H:%M:%S")
-    messages_dict = {"timestamp": now, "from": username, "message": message}
-    messages.append(messages_dict)
-
-
-@app.route("/test", methods=["GET", "POST"])
-def test():
-    """Main page with instructions"""
-    if request.method == "POST":
-        session["username"] = request.form["username"]
-
-    if "username" in session:
-        return redirect(session["username"])
-
-    return render_template("test.html")
-
-
-@app.route("/<username>")
-def user(username):
-    """Display chat messages"""
-    return render_template("profile.html", username=username,
-                           chat_messages=messages)
-
-
-@app.route("/<username>/<message>")
-def send_message(username, message):
-    """Create a new message and redirect back to the chat page"""
-    add_messages(username, message)
-    return redirect("/" + username)
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

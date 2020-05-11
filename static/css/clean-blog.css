@@ -183,7 +183,6 @@ header.masthead .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #212529;
   opacity: 0.5;
 }
 
@@ -267,24 +266,14 @@ header.masthead .post-heading .meta a {
   }
 }
 
-.post-preview > a {
-  color: #212529;
-}
-
-.post-preview > a:focus, .post-preview > a:hover {
-  text-decoration: none;
-  color: #26a69a;
-}
-
-.post-preview > a > .post-title {
+.post-title {
   font-size: 30px;
   margin-top: 30px;
   margin-bottom: 10px;
 }
 
-
 @media only screen and (min-width: 768px) {
-  .post-preview > a > .post-title {
+  .post-title {
     font-size: 36px;
   }
 }
@@ -373,18 +362,9 @@ footer .copyright {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.btn-primary {
-  background-color: #0085A1;
-  border-color: #0085A1;
-}
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #fff;
   background-color: #979797;
-  border-color: #979797;
-}
 
-.btn-lg {
-  font-size: 16px;
-  padding: 25px 35px;
 }
