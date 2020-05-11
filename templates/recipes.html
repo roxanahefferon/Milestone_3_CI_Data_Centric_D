@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Grub's Up!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grub's Up!</title>
 </head>
-
 <body>
-	{% extends 'base.html' %}
-	{% block content %}
-	<h1>{{ view_name}}</h1>
-	<ul class="collapsible">
-		{% for recipe in recipe %}
-		<li>
-			<div class="collapsible-header">
-				<i class="material-icons">double_arrow</i>
-				<h5 class="recipename">{{recipe.recipe_name}}</h5>
-			</div>
-			<div class="collapsible-body">
-				<span class="description">{{recipe.recipe_description}}</span>
-				<hr>
-				<ul>
-					<li class="ingredients">Ingredients</li>
-					<li>{{recipe.ingredients}}</li>
-					
-					<li class="method">Method</li>
-					<li>{{recipe.method}}</li>
-					
-					<li class="servings">Serves: {{recipe.servings}}</li>
-					<li class="difficulty">Difficulty: {{recipe.difficulty}}</li>
-					<li class="cookingtime">Cooking time: {{recipe.cook_time}} minutes</li>
-				</ul>
-				<div class="col s3">
-					<a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-						class="waves-effect waves-light btn btn_small">Edit</a>
-					<a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-						class="waves-effect waves-light btn btn_small">Delete</a>
-				</div>
-				<div class="task_header col s9">
-				</div>
-			</div>
-		</li>
-	</ul>
 
-{% endfor %}
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>{{ view_name}}</h1>
+
+    <ul class="collapsible">
+    {% for recipe in recipe %}
+    <li>
+      <div class="collapsible-header">
+
+      <i class="material-icons" style="color: #f2a535;"> double_arrow</i><h5>{{recipe.recipe_name}}</h5></div>
+      <div class="collapsible-body">
+      <span style="color: #f2a535; font-size: 24px; font-weight:bold;">{{recipe.recipe_description}}</span>
+      <hr>
+         <ul>
+            <li style="font-size: 20px;"><i class="material-icons prefix" style="color: #26a69a;">shopping_cart</i>Ingredients:</li>
+            <li>{{recipe.ingredients}}</li>
+            <li style="font-size: 20px;"><i class="material-icons prefix" style="color: #26a69a;">build</i>Method:</li>
+            <li>{{recipe.method}}</li>
+            <li style="font-size: 20px;"><i class="material-icons prefix" style="color: #26a69a;">people</i>Servings:</li> <li>{{recipe.servings}}</li>
+            <li style="font-size: 20px;"><i class="material-icons prefix" style="color: #26a69a;">assessment</i>Difficulty:</li> <li>{{recipe.difficulty}}</li>
+            <li style="font-size: 20px;"><i class="material-icons prefix" style="color: #26a69a;">hourglass_full</i>Cooking Time:</li> <li>{{recipe.cook_time}} minutes</li>
+         </ul>
+         <div class="col s3">
+                    
+                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn btn_small">Edit</a>
+                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn btn_small">Delete</a>
+                    
+                </div>
+                <div class="task_header col s9">
+                </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+
+ 
+
 {% endblock %}
 
 </body>
-
 </html>
+© 2020 GitHub, Inc.
