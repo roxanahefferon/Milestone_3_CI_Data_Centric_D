@@ -25,10 +25,10 @@
 				<ul>
 					<li class="ingredients">Ingredients</li>
 					<li>{{recipe.ingredients}}</li>
-					<br>
+					
 					<li class="method">Method</li>
 					<li>{{recipe.method}}</li>
-					<br>
+					
 					<li class="servings">Serves: {{recipe.servings}}</li>
 					<li class="difficulty">Difficulty: {{recipe.difficulty}}</li>
 					<li class="cookingtime">Cooking time: {{recipe.cook_time}} minutes</li>
@@ -43,9 +43,11 @@
 				</div>
 			</div>
 		</li>
-		{% endfor %}
 	</ul>
-	{% endblock %}
+
+{% endfor %}
+{% endblock %}
+
 </body>
 
 </html>

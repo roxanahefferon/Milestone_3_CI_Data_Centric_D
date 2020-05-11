@@ -130,7 +130,7 @@ Deployment and source control was carried out via GitHub and Heroku. The followi
 <h3>jQuery</h3>
 <a href="https://codebeautify.org/jsvalidate" target="_blank">Code Beautify</a> and <a href="https://jshint.com/">JShint</a> target="_blank"> were used for validation of jQuery code. No significant erros were generated.
 <h3>Python</h3>
-<a href="http://pep8online.com/" target="_blank">PEP8</a> was used to validate Python code and did not generate any errors.
+<a href="http://pep8online.com/" target="_blank">PEP8</a> was used to validate Python code and did not generate any errors
 <h3>HTML Beautifier</h3>
 <a href="http://minifycode.com/html-beautifier/" target="_blank">Minify Code</a> was used to beautify HTML code.
 <h2>Credits</h2>
