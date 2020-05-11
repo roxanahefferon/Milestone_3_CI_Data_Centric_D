@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-	<!-- Link to CSS file -->
+	
+    <!-- Link to CSS file -->
 	<link rel="stylesheet" href="{{ url_for ('static', filename='css/clean-blog.css') }}" type="text/css" />
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
 	
@@ -46,7 +46,7 @@
 	</nav>
 	
     <!-- Page Header -->
-	<header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1517953720815-3ad3488a67f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80')" width="auto">
+	<header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1517953720815-3ad3488a67f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80')">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -62,7 +62,8 @@
 	
     <!-- Main Content -->
 	<div class="container">
-{% block content %} {% endblock %}
+{% block content %}
+{% endblock %}
     </div>
 	
     <!-- Footer -->
@@ -93,13 +94,13 @@
 							</a>
 						</li>
 					</ul>
-					<p class="copyright text-muted">Copyright &copy; roxheff 2020</p>
+					<p class="copyright text-muted">Copyright&copy; roxheff 2020</p>
 				</div>
 			</div>
 		</div>
 	</footer>
-
-	<!-- Bootstrap core JavaScript -->
+	
+    <!-- Bootstrap core JavaScript -->
 	<script src="{{ url_for ('static', filename='vendor/jquery/jquery.min.js') }}"></script>
 	<script src="{{ url_for ('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -119,7 +120,6 @@
 		    $('select').formSelect();
 		  });
 	</script>
-
 </body>
 
 </html>

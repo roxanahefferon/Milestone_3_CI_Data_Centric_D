@@ -10,16 +10,20 @@
 
 <body>
 
-{% extends 'base.html' %} {% block content %}
-	
-    <h3>Add Recipe</h3>
+{% extends 'base.html' %} 
+{% block content %}
+
+	<h3 style="color: #f2a535;">Add Recipe</h3>
 	<div class="row">
 		<form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
 			<div class="row">
 				<div class="input-field col s12">	<i class="material-icons prefix">double_arrow</i>
 					<select id="category_name" name="category_name">
-						<option value="" disabled selected>Category</option>{% for cat in categories %}
-						<option value="{{cat.category_name}}">{{cat.category_name}}</option>{% endfor %}</select>
+						<option value="" disabled selected>Category</option>
+{% for cat in categories %}
+						<option value="{{cat.category_name}}">{{cat.category_name}}</option>
+{% endfor %}
+                    </select>
 				</div>
 			</div>
 			<div class="row">
@@ -55,8 +59,11 @@
 			<div class="row">
 				<div class="input-field col s12">	<i class="material-icons prefix">assessment</i>
 					<select id="difficulty" name="difficulty">
-						<option value="" disabled selected>Difficulty level</option>{% for dif in difficulty %}
-						<option value="{{dif.difficulty_level}}">{{dif.difficulty_level}}</option>{% endfor %}</select>
+						<option value="" disabled selected>Difficulty level</option>
+{% for dif in difficulty %}
+						<option value="{{dif.difficulty_level}}">{{dif.difficulty_level}}</option>
+{% endfor %}
+                    </select>
 				</div>
 			</div>
 			<div class="row">
